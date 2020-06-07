@@ -11,7 +11,8 @@ class AdminPortofolioController extends CBController {
         $this->setPermalink("portofolio");
         $this->setPageTitle("Portofolio");
 
-        $this->addImage("Foto","foto")->encrypt(true);
+        $this->addText("Judul","judul")->strLimit(150)->maxLength(255);
+		$this->addImage("Foto","foto")->encrypt(true);
 		$this->addTextArea("Ket","ket")->strLimit(150);
 		
 

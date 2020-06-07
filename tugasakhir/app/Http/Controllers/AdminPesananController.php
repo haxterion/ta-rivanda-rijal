@@ -11,7 +11,7 @@ class AdminPesananController extends CBController {
         $this->setPermalink("pesanan");
         $this->setPageTitle("Pesanan");
 
-        $this->addSelectTable("User","id_user",["table"=>"tb_user","value_option"=>"id","display_option"=>"username","sql_condition"=>""]);
+        $this->addSelectTable("User","id_user",["table"=>"users","value_option"=>"id","display_option"=>"name","sql_condition"=>""]);
 		$this->addText("Acara","acara")->strLimit(150)->maxLength(255);
 		$this->addDate("Tanggal","tanggal");
 		$this->addSelectTable("Paket","id_paket",["table"=>"tb_paket","value_option"=>"id","display_option"=>"nama_paket","sql_condition"=>""]);
